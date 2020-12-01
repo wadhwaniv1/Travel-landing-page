@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gibber</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="anime.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <section class="landing">
+            <nav>
+                <h1 id="logo">Afloat</h1>
+                <ul class="nav-links">
+                    <li><a href="#" style="text-decoration: none;color: black;">Home</a></li>
+                    <li><a href="#" style="text-decoration: none;color: black;">Contact</a></li>
+                    <li><a href="#" id="hi" style="text-decoration: none;color: black;">About Us</a></li>
+                </ul>
+            </nav>
+            <h2 class="big-text">Stay Afloat</h2>
+        </section>
+    </main>
+
+    <div id="heading-trips">Equisite trips</div>
+
+    <div class="trips">
+        <div class="places">
+            <h2>Los Angeles</h2>
+            <img src="./la.jpg" alt="">
+            <p>Nicknamed the "City of Angels" is the most populous city in California. Located on a broad basin in Southern California, the city is surrounded by vast mountain ranges, valleys, forests, beautiful beaches along the Pacific Ocean, and nearby desert.</p>
+            <h4>4D/5N</h4>
+            <h5>$5000.00</h5>
+        </div>
+        <div class="places">
+            <h2>Busan</h2>
+            <img src="./busan.jpg" alt="">
+            <p>Busan (formerly written as Pusan) is the largest port city and second-largest city in South Korea. It lies on the southeast tip of the Korean Peninsula. It is important for transport and shipping. It is best known for Busan Port and Haeundae Beach.</p>
+            <h4>6D/5N</h4>
+            <h5>$3050.00</h5>
+        </div>
+        <div class="places">
+            <h2>Chile</h2>
+            <img src="./chile.jpg" alt="">
+            <p>The longest and thinnest country in the world runs from the Andes to the Pacific. As well as sharing borders with Argentina, Peru and Bolivia. Chile also has territories in Polynesia and Antarctica, making it a tri-continental nation.</p>
+            <h4>4D/5N</h4>
+            <h5>$5000.00</h5>
+        </div>
+    </div>
+
+    
+
+    <div class="app-wrap">
+        <div id="heading-trips">Weather info.</div>
+        <header class="weather-header">
+            <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
+        </header>
+        <main class="weather-main">
+            <section class="location">
+                <div class="city">New Delhi, IN</div>
+                <div class="date">Thursday 10 December 2020</div>
+            </section>
+            <div class="current">
+                <div class="temp">15<span>°c</span></div>
+                <div class="weather">Sunny</div>
+                <div class="hi-low">13°c / 16°c</div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+      
+            <h3>About<span>Afloat</span></h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="#">Contact</a>
+            </p>
+
+            <p class="footer-company-name">© 2020 Afloat Traveling Pvt. Ltd.</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                  <p><span>550 - Gurudwara Sahib,
+                     Bldg. No. A - 1, Sector - 1</span>
+                    Malviya Nagar, Jaipur - 400710</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 22-27782183</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@afloat.com">support@afloat.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                We offer exquisite trips and vacations around the world with benefits.</p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="intro">
+        <div class="intro-text">
+            <h1 class="hide">
+                <span class="text">Creating innovation</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text">For everyday</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text">people.</span>
+            </h1>
+        </div>
+    </div>
+    <div class="slider"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
