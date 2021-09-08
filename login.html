@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <h1 id="logo">Afloat</h1>
+            <ul class="nav-links">
+                <li><a href="./travel.html" style="text-decoration: none;color: black;">Home</a></li>
+                <li><a href="#" style="text-decoration: none;color: black;">About Us</a></li>
+                <li><a href="#" id="hi" style="text-decoration: none;color: black;">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="form-box">   
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="./login-reg-img/fb.png" alt="fb">
+                <img src="./login-reg-img/tw.png" alt="tw">
+                <img src="./login-reg-img/gp.png" alt="gp">
+            </div>
+            <form name="login-form" action="#" class="input-group" id="login" onsubmit="return validateForm()">
+                <input type="text" class="input-field" name="uname1" id="uname1" placeholder="User ID">
+                <input type="password" class="input-field" name="pass1" id="pass1" placeholder="Enter password">
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn slogin">Log In</button>
+            </form>
+            <form name="register-form" action="#" class="input-group" id="register" onsubmit="return validateForm1()">
+                <input type="text" class="input-field" name="uname2" id="uname2" placeholder="User ID">
+                <input type="email" class="input-field" name="email" id="email" placeholder="Email ID">
+                <input type="password" class="input-field" name="pass2" id="pass2" placeholder="Enter password">
+                <input type="password" class="input-field" name="cpass" id="cpass" placeholder="Confirm password">
+                <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                <button type="submit" class="submit-btn sreg">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+        
+        var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+        function validateForm1(){
+            var uname2 = document.getElementById('uname2').value;
+            var email = document.getElementById('email').value;
+            var atposition=email.indexOf("@");  
+            var dotposition=email.lastIndexOf(".");
+            var pass2 = document.getElementById('pass2').value;
+            var cpass = document.getElementById('cpass').value;
+
+            console.log(email);
+            if(uname2 == "")
+            {
+                alert("Username must be filled")
+                return false;
+            }else if(email == ""){
+                alert("Email must be filled")
+                return false;
+            }else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=email.length){  
+                alert("Please enter a valid e-mail address");  
+                return false;  
+            }else if(pass2.length < 8){
+                alert("Password must be at least 8 characters")
+                return false;
+            }else if(! pass2.match(passw)){
+                alert("Password must be 8 to 16 characters characters which contain at least one numeric digit, one uppercase and one lowercase letter")
+                return false;
+            }
+            else if(pass2 != cpass){
+                alert("Password musty be same");
+                return false;
+            }
+        }
+
+        function validateForm(){
+            var uname1 = document.getElementById('uname1').value;
+            var pass1 = document.getElementById('pass1').value;
+            if(uname1 == "")
+            {
+                alert("Username must be filled")
+                return false;
+            }else if(pass1.length < 8){
+                alert("Password must be at least 8 characters")
+                return false;
+            }else if(! pass1.match(passw)){
+                alert("Password must be 8 to 16 characters characters which contain at least one numeric digit, one uppercase and one lowercase letter")
+                return false;
+            }
+        }
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+</html>
